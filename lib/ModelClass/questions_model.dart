@@ -1,20 +1,25 @@
-class QuestionsModel {
+class QuestionsModel
+{
   String? category;
-  String? type;
   String? difficulty;
   String? question;
+  String? type;
   String? correctAnswer;
   List<String>? incorrectAnswers;
 
-  QuestionsModel({
-      this.category, 
-      this.type, 
-      this.difficulty, 
-      this.question, 
-      this.correctAnswer, 
-      this.incorrectAnswers});
+  QuestionsModel(
+      {
+        this.difficulty,
+        this.question,
+        this.category,
+        this.type,
+        this.correctAnswer,
+        this.incorrectAnswers
+      }
+    );
 
-  QuestionsModel.fromJson(dynamic json) {
+  QuestionsModel.fromJson(dynamic json)
+  {
     category = json["category"];
     type = json["type"];
     difficulty = json["difficulty"];
@@ -23,12 +28,13 @@ class QuestionsModel {
     incorrectAnswers = json["incorrect_answers"] != null ? json["incorrect_answers"].cast<String>() : [];
   }
 
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson()
+  {
     var map = <String, dynamic>{};
     map["category"] = category;
-    map["type"] = type;
     map["difficulty"] = difficulty;
     map["question"] = question;
+    map["type"] = type;
     map["correct_answer"] = correctAnswer;
     map["incorrect_answers"] = incorrectAnswers;
     return map;

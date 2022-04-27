@@ -19,14 +19,14 @@ class _questionsSCreenState extends State<questionsSCreen> {
   double score = 0.00;
   double myScore = 0.0;
   String? correctAnswer;
-  var _items = [];
-  var allAnswers = [];
-  var combinedList = [];
   bool result = false;
   bool textColor = false;
   bool btnEnabled = false;
   double maxSCore = 70;
   int? _expandedIndex;
+  var _items = [];
+  var allAnswers = [];
+  var combinedList = [];
   bool quizCompleted = false;
 
   Future<void> readJson() async {

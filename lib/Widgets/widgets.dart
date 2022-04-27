@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import '../sizeConfig.dart';
 
@@ -95,9 +94,9 @@ class scoreProgressIndicator extends StatelessWidget {
         LinearPercentIndicator(
           width: MediaQuery.of(context).size.width - 20,
           lineHeight: SizeConfig.blockSizeVertical! * 3.5,
-          percent: this.score!,
           backgroundColor: Colors.grey,
           progressColor: Colors.black,
+          percent: this.score!,
         ),
       ],
     );
